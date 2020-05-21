@@ -1,24 +1,19 @@
 import React from "react"
-import { Box, MaskedInput, Image, Text, Heading, Button } from "grommet"
+import { Box, TextInput, Image, Text, Heading, Button } from "grommet"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import factImage from "../images/fact.svg"
+import emailImage from "../images/email.svg"
+import passwordImage from "../images/password.svg"
 
 const Fact = ({text, number}) => (
-  <>
-    <Image src={factImage} alt="Fact" />
+  <Box direction="column">
+    <Image alignSelf="start" src={factImage} alt="Fact" />
     <Heading level={4}>Fact #{number}</Heading>
     <Text>{text}</Text>
-  </>
-)
-
-const BigInput = ({text, icon}) => (
-  <>
-    <Image src={icon} alt="Icon"></Image>
-    <MaskedInput placeholder={text}></MaskedInput>
-  </>
+  </Box>
 )
 
 const IndexPage = () => (
@@ -37,9 +32,11 @@ const IndexPage = () => (
       <Fact number={3} text="Easily Get started by importing videos directly from your Youtube channel"/>
     </Box>
     <Box>
-      <BigInput text={"E-mail"} />
-      <BigInput text={"Password"} />
-      <Button>Get Started</Button>
+      <Box direction="row">
+        <TextInput icon={<Image src={emailImage}/>} placeholder="E-mail" />
+        <TextInput icon={<Image src={passwordImage}/>} placeholder="Password" />
+      </Box>
+      <Button primary label="Get Started" />
     </Box>
   </Layout>
 )

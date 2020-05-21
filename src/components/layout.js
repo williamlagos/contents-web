@@ -7,40 +7,20 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Grommet } from "grommet"
-import { useStaticQuery, graphql } from "gatsby"
+import { Grommet, Box, Image, Stack, grommet } from "grommet"
 
-import Header from "./header"
+import { mockupImage } from "../images/mockup.png"
+import { bgImage } from "../images/bg.png"
 // import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
-    <Grommet>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        {/*<footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>*/}
-      </div>
+    <Grommet theme={grommet}>
+      <Stack anchor="right">
+        <Image src={bgImage} />
+        <Image src={mockupImage} />
+      </Stack>
+      <Box>{children}</Box>
     </Grommet>
   )
 }
