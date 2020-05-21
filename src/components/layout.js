@@ -7,18 +7,13 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Grommet, Box, grommet } from "grommet"
+import { Grommet, grommet } from "grommet"
 
-import bgImage from "../images/bg.png"
 // import "./layout.css"
 
 const Layout = ({ children }) => {
   return (
-    <Grommet theme={grommet}>
-      <Box background={`url(${bgImage})`}>
-        {children}
-      </Box>
-    </Grommet>
+    <Grommet theme={grommet}> {children} </Grommet>
   )
 }
 
