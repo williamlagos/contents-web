@@ -1,2 +1,2 @@
-# landing
-Landing Page built with React
+# react-boilerplate
+React application sample to start with
