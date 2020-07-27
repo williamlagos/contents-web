@@ -1,9 +1,9 @@
 import React from "react"
-import Media from "react-media"
-import { Carousel, Box, TextInput, Image, Text, Heading, Button } from "grommet"
+// import Media from "react-media"
+// import { Carousel, Box, TextInput, Image, Text, Heading, Button } from "grommet"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+/*import SEO from "../components/seo"
 
 import factImage from "../images/fact.svg"
 import emailImage from "../images/email.svg"
@@ -82,6 +82,12 @@ const IndexPage = () => (
       </Layout>
     )}
   </Media>
+)*/
+
+const Page = () => (
+  <Layout>
+    <h1>Hello World!</h1>
+  </Layout>
 )
 
-export default IndexPage
+export default Page
