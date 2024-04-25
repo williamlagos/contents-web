@@ -89,11 +89,5 @@ export const Detail = () => (
       id="Espaco"
       className="modal hide fade newusers"
     ></div>
-    <footer className="text-center">
-      <p>
-        Orgulhosamente desenvolvido por{' '}
-        <a href="http://genese.me">G&ecirc;nese</a>.
-      </p>
-    </footer>
   </>
 )
