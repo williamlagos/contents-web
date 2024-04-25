@@ -1,4 +1,4 @@
-export const Footer = () => (
+const Footer = () => (
   <footer className="text-center">
     <p>
       Orgulhosamente desenvolvido por{' '}
@@ -6,3 +6,5 @@ export const Footer = () => (
     </p>
   </footer>
 )
+
+export default Footer

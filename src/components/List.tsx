@@ -4,7 +4,7 @@ interface ListProps {
   perm: any
 }
 
-export const List = ({ user, perm }: ListProps) => (
+const List = ({ user, perm }: ListProps) => (
   <>
     <div
       id="Grade"
@@ -119,3 +119,5 @@ export const List = ({ user, perm }: ListProps) => (
     ></div>
   </>
 )
+
+export default List

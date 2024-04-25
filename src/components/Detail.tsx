@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 const ColoredBlock = styled.div`
@@ -15,7 +16,7 @@ const SpacedColumn = styled.div`
   }
 `
 
-export const Detail = () => (
+const Detail = () => (
   <>
     <div className="jumbotron">
       <h1>
@@ -91,3 +92,5 @@ export const Detail = () => (
     ></div>
   </>
 )
+
+export default Detail

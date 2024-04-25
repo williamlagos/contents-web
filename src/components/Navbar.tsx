@@ -10,7 +10,7 @@ interface NavbarProps {
   pages: any
 }
 
-export const Navbar = ({ pages }: NavbarProps) => (
+const Navbar = ({ pages }: NavbarProps) => (
   <>
     <nav className="navbar navbar-default navbar-static-top">
       <div className="container">
@@ -107,3 +107,5 @@ export const Navbar = ({ pages }: NavbarProps) => (
     <div className="container-fluid text-center main">{/* children */}</div>
   </>
 )
+
+export default Navbar
