@@ -10,7 +10,7 @@ import hexagonLogo from '../assets/svg/hubpro.svg'
 import dinamoImage from '../assets/svg/new.svg'
 import githubImage from '../assets/svg/github.svg'
 
-const IndexPage = () => (
+const MainPage = () => (
   <Layout>
     <Main background="#eee">
       <Box
@@ -206,4 +206,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default MainPage
