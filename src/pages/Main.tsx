@@ -54,7 +54,7 @@ const MainPage = () => (
         margin="small"
         background="light-1"
       >
-        <CardHeader size="medium">
+        <CardHeader>
           <Image
             fit="contain"
             src={rocketImage}
@@ -89,7 +89,7 @@ const MainPage = () => (
         margin="small"
         background="light-1"
       >
-        <CardHeader size="medium">
+        <CardHeader>
           <Image
             fit="contain"
             src={hexagonLogo}
@@ -124,7 +124,7 @@ const MainPage = () => (
         margin="small"
         background="light-1"
       >
-        <CardHeader size="medium">
+        <CardHeader>
           <Image
             fit="contain"
             src={dinamoImage}
@@ -159,7 +159,7 @@ const MainPage = () => (
         margin="small"
         background="light-1"
       >
-        <CardHeader size="medium">
+        <CardHeader>
           <Image
             fit="contain"
             src={githubImage}
@@ -189,19 +189,44 @@ const MainPage = () => (
           />
         </CardFooter>
       </Card>
-      {/*<Card basis="medium" margin="small" background="light-1">
-        <CardHeader size="medium">  
-          <Image fit="contain" src={githubImage} alt="Weather Station Logo" />
+      <Card
+        basis="medium"
+        margin="small"
+        background="light-1"
+      >
+        <CardHeader>
+          <Image
+            fit="contain"
+            src={githubImage}
+            alt="Weather Station Logo"
+          />
         </CardHeader>
         <CardBody pad="medium">
-          <Heading level={3} margin="none">Weather Station</Heading>
-          <Paragraph>Weather Station Platform developed with Arduino and for Android, iOS and Web</Paragraph>
+          <Heading
+            level={3}
+            margin="none"
+          >
+            Weather Station
+          </Heading>
+          <Paragraph>
+            Weather Station Platform developed with Arduino and for Android, iOS
+            and Web
+          </Paragraph>
         </CardBody>
-        <CardFooter pad={{horizontal: "small"}} background="light-2">   
-          <Button icon={<Favorite color="red" />} hoverIndicator />
-          <Button icon={<ShareOption color="plain" />} hoverIndicator />
+        <CardFooter
+          pad={{ horizontal: 'small' }}
+          background="light-2"
+        >
+          <Button
+            icon={<Favorite color="red" />}
+            hoverIndicator
+          />
+          <Button
+            icon={<ShareOption color="plain" />}
+            hoverIndicator
+          />
         </CardFooter>
-      </Card>*/}
+      </Card>
     </Box>
   </Layout>
 )

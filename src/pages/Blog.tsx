@@ -4,6 +4,8 @@ import Layout from '../components/Layout'
 
 import { Box, Heading, Paragraph /* Image */ } from 'grommet'
 
+import { Post } from '../types'
+
 const BlogPage = () => {
   const [posts, setPosts] = useState([])
 
@@ -28,15 +30,18 @@ const BlogPage = () => {
         <Paragraph fill>
           Here will be content about programming and design.
         </Paragraph>
-        {posts.map(post => {
+        {posts.map((post: Post) => {
           return (
             <Box
               key={post.id}
               align="center"
             >
               <Heading level={2}> {post.name} </Heading>
-              <Heading level={3}> Published in {post.date} </Heading>
-              <Heading level={4}> Written by {post.user.username} </Heading>
+              <Heading level={3}>
+                {' '}
+                Published in {post.date.toLocaleDateString()}{' '}
+              </Heading>
+              <Heading level={4}> Written by {post.username} </Heading>
               <Paragraph fill> {post.content} </Paragraph>
             </Box>
           )
