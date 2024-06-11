@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
 
 import Layout from '../components/Layout'
+import Contents from '../components/Contents'
 
-import { Box, Heading, Paragraph /* Image */ } from 'grommet'
-
-import { Post } from '../types'
+import { Box, Heading, Paragraph } from 'grommet'
 
 const BlogPage = () => {
   const [posts, setPosts] = useState([])
@@ -30,22 +29,7 @@ const BlogPage = () => {
         <Paragraph fill>
           Here will be content about programming and design.
         </Paragraph>
-        {posts.map((post: Post) => {
-          return (
-            <Box
-              key={post.id}
-              align="center"
-            >
-              <Heading level={2}> {post.name} </Heading>
-              <Heading level={3}>
-                {' '}
-                Published in {post.date.toLocaleDateString()}{' '}
-              </Heading>
-              <Heading level={4}> Written by {post.username} </Heading>
-              <Paragraph fill> {post.content} </Paragraph>
-            </Box>
-          )
-        })}
+        <Contents items={posts} />
       </Box>
     </Layout>
   )

@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { Post } from '../types'
+import { Box, Heading, Paragraph } from 'grommet'
 
 const ColoredBlock = styled.div`
   .coloredblock {
@@ -15,7 +17,11 @@ const SpacedColumn = styled.div`
   }
 `
 
-const Detail = () => (
+interface ContentsProps {
+  items: Post[]
+}
+
+const Contents = ({ items }: ContentsProps) => (
   <>
     <div className="jumbotron">
       <h1>
@@ -83,7 +89,24 @@ const Detail = () => (
       style={{ margin: 'auto' }}
       className="row"
     >
-      <div id="Grade"></div>
+      <div id="Grade">
+        {items.map((post: Post) => {
+          return (
+            <Box
+              key={post.id}
+              align="center"
+            >
+              <Heading level={2}> {post.name} </Heading>
+              <Heading level={3}>
+                {' '}
+                Published in {post.date.toLocaleDateString()}{' '}
+              </Heading>
+              <Heading level={4}> Written by {post.username} </Heading>
+              <Paragraph fill> {post.content} </Paragraph>
+            </Box>
+          )
+        })}
+      </div>
     </div>
     <div
       id="Espaco"
@@ -92,4 +115,4 @@ const Detail = () => (
   </>
 )
 
-export default Detail
+export default Contents
