@@ -10,6 +10,7 @@ import rocketImage from '../assets/svg/rocket.svg'
 import hexagonLogo from '../assets/svg/hubpro.svg'
 import dinamoImage from '../assets/svg/new.svg'
 import githubImage from '../assets/svg/github.svg'
+import BaseFooter from '../components/BaseFooter'
 
 const MainPage = () => (
   <Layout>
@@ -239,6 +240,7 @@ const MainPage = () => (
         </Card>
       </Box>
     </Main>
+    <BaseFooter />
   </Layout>
 )
 
