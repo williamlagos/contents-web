@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import Navbar from '../components/Navbar'
 
 import { Card, CardHeader, CardBody, CardFooter } from 'grommet'
 import { Main, Heading, Paragraph, Box, Image, Button } from 'grommet'
@@ -12,6 +13,14 @@ import githubImage from '../assets/svg/github.svg'
 
 const MainPage = () => (
   <Layout>
+    <Navbar
+      session={false}
+      pages={[
+        { label: 'Facebook' },
+        { label: 'Twitter' },
+        { label: 'YouTube' }
+      ]}
+    />
     <Main background="#eee">
       <Box
         margin="large"
@@ -41,193 +50,195 @@ const MainPage = () => (
           The Labs is a space for experimental projects
         </Paragraph>
       </Box>
-    </Main>
 
-    <Box
-      wrap
-      justify="center"
-      direction="row"
-      margin="large"
-    >
-      <Card
-        basis="medium"
-        margin="small"
-        background="light-1"
+      <Box
+        wrap
+        justify="center"
+        direction="row"
+        margin="large"
       >
-        <CardHeader>
-          <Image
-            fit="contain"
-            src={rocketImage}
-            alt="Rocket launch"
-          />
-        </CardHeader>
-        <CardBody pad="medium">
-          <Heading
-            level={3}
-            margin="none"
-          >
-            Apollo
-          </Heading>
-          <Paragraph>Landing Page and CMS Project.</Paragraph>
-        </CardBody>
-        <CardFooter
-          pad={{ horizontal: 'small' }}
-          background="light-2"
+        <Card
+          basis="medium"
+          margin="small"
+          background="light-1"
         >
-          <Button
-            icon={<Favorite color="red" />}
-            hoverIndicator
-          />
-          <Button
-            icon={<ShareOption color="plain" />}
-            hoverIndicator
-          />
-        </CardFooter>
-      </Card>
-      <Card
-        basis="medium"
-        margin="small"
-        background="light-1"
-      >
-        <CardHeader>
-          <Image
-            fit="contain"
-            src={hexagonLogo}
-            alt="Labs logo"
-          />
-        </CardHeader>
-        <CardBody pad="medium">
-          <Heading
-            level={3}
-            margin="none"
+          <CardHeader>
+            <Image
+              fit="contain"
+              src={rocketImage}
+              alt="Rocket launch"
+            />
+          </CardHeader>
+          <CardBody pad="medium">
+            <Heading
+              level={3}
+              margin="none"
+            >
+              Apollo
+            </Heading>
+            <Paragraph>Landing Page and CMS Project.</Paragraph>
+          </CardBody>
+          <CardFooter
+            pad={{ horizontal: 'small' }}
+            background="light-2"
           >
-            Learning
-          </Heading>
-          <Paragraph>Design and Development Courses.</Paragraph>
-        </CardBody>
-        <CardFooter
-          pad={{ horizontal: 'small' }}
-          background="light-2"
+            <Button
+              icon={<Favorite color="red" />}
+              hoverIndicator
+            />
+            <Button
+              icon={<ShareOption color="plain" />}
+              hoverIndicator
+            />
+          </CardFooter>
+        </Card>
+        <Card
+          basis="medium"
+          margin="small"
+          background="light-1"
         >
-          <Button
-            icon={<Favorite color="red" />}
-            hoverIndicator
-          />
-          <Button
-            icon={<ShareOption color="plain" />}
-            hoverIndicator
-          />
-        </CardFooter>
-      </Card>
-      <Card
-        basis="medium"
-        margin="small"
-        background="light-1"
-      >
-        <CardHeader>
-          <Image
-            fit="contain"
-            src={dinamoImage}
-            alt="Dinamo figure"
-          />
-        </CardHeader>
-        <CardBody pad="medium">
-          <Heading
-            level={3}
-            margin="none"
+          <CardHeader>
+            <Image
+              fit="contain"
+              src={hexagonLogo}
+              alt="Labs logo"
+            />
+          </CardHeader>
+          <CardBody pad="medium">
+            <Heading
+              level={3}
+              margin="none"
+            >
+              Learning
+            </Heading>
+            <Paragraph>Design and Development Courses.</Paragraph>
+          </CardBody>
+          <CardFooter
+            pad={{ horizontal: 'small' }}
+            background="light-2"
           >
-            Dinamo
-          </Heading>
-          <Paragraph>Adventure Game in side-scrolling.</Paragraph>
-        </CardBody>
-        <CardFooter
-          pad={{ horizontal: 'small' }}
-          background="light-2"
+            <Button
+              icon={<Favorite color="red" />}
+              hoverIndicator
+            />
+            <Button
+              icon={<ShareOption color="plain" />}
+              hoverIndicator
+            />
+          </CardFooter>
+        </Card>
+        <Card
+          basis="medium"
+          margin="small"
+          background="light-1"
         >
-          <Button
-            icon={<Favorite color="red" />}
-            hoverIndicator
-          />
-          <Button
-            icon={<ShareOption color="plain" />}
-            hoverIndicator
-          />
-        </CardFooter>
-      </Card>
-      <Card
-        basis="medium"
-        margin="small"
-        background="light-1"
-      >
-        <CardHeader>
-          <Image
-            fit="contain"
-            src={githubImage}
-            alt="Pomodorino Logo"
-          />
-        </CardHeader>
-        <CardBody pad="medium">
-          <Heading
-            level={3}
-            margin="none"
+          <CardHeader>
+            <Image
+              fit="contain"
+              src={dinamoImage}
+              alt="Dinamo figure"
+            />
+          </CardHeader>
+          <CardBody pad="medium">
+            <Heading
+              level={3}
+              margin="none"
+            >
+              Dinamo
+            </Heading>
+            <Paragraph>Adventure Game in side-scrolling.</Paragraph>
+          </CardBody>
+          <CardFooter
+            pad={{ horizontal: 'small' }}
+            background="light-2"
           >
-            Pomodorino
-          </Heading>
-          <Paragraph>Application developed for Android, iOS and Web</Paragraph>
-        </CardBody>
-        <CardFooter
-          pad={{ horizontal: 'small' }}
-          background="light-2"
+            <Button
+              icon={<Favorite color="red" />}
+              hoverIndicator
+            />
+            <Button
+              icon={<ShareOption color="plain" />}
+              hoverIndicator
+            />
+          </CardFooter>
+        </Card>
+        <Card
+          basis="medium"
+          margin="small"
+          background="light-1"
         >
-          <Button
-            icon={<Favorite color="red" />}
-            hoverIndicator
-          />
-          <Button
-            icon={<ShareOption color="plain" />}
-            hoverIndicator
-          />
-        </CardFooter>
-      </Card>
-      <Card
-        basis="medium"
-        margin="small"
-        background="light-1"
-      >
-        <CardHeader>
-          <Image
-            fit="contain"
-            src={githubImage}
-            alt="Weather Station Logo"
-          />
-        </CardHeader>
-        <CardBody pad="medium">
-          <Heading
-            level={3}
-            margin="none"
+          <CardHeader>
+            <Image
+              fit="contain"
+              src={githubImage}
+              alt="Pomodorino Logo"
+            />
+          </CardHeader>
+          <CardBody pad="medium">
+            <Heading
+              level={3}
+              margin="none"
+            >
+              Pomodorino
+            </Heading>
+            <Paragraph>
+              Application developed for Android, iOS and Web
+            </Paragraph>
+          </CardBody>
+          <CardFooter
+            pad={{ horizontal: 'small' }}
+            background="light-2"
           >
-            Weather Station
-          </Heading>
-          <Paragraph>
-            Weather Station Platform developed with Arduino and for Android, iOS
-            and Web
-          </Paragraph>
-        </CardBody>
-        <CardFooter
-          pad={{ horizontal: 'small' }}
-          background="light-2"
+            <Button
+              icon={<Favorite color="red" />}
+              hoverIndicator
+            />
+            <Button
+              icon={<ShareOption color="plain" />}
+              hoverIndicator
+            />
+          </CardFooter>
+        </Card>
+        <Card
+          basis="medium"
+          margin="small"
+          background="light-1"
         >
-          <Button
-            icon={<Favorite color="red" />}
-            hoverIndicator
-          />
-          <Button
-            icon={<ShareOption color="plain" />}
-            hoverIndicator
-          />
-        </CardFooter>
-      </Card>
-    </Box>
+          <CardHeader>
+            <Image
+              fit="contain"
+              src={githubImage}
+              alt="Weather Station Logo"
+            />
+          </CardHeader>
+          <CardBody pad="medium">
+            <Heading
+              level={3}
+              margin="none"
+            >
+              Weather Station
+            </Heading>
+            <Paragraph>
+              Weather Station Platform developed with Arduino and for Android,
+              iOS and Web
+            </Paragraph>
+          </CardBody>
+          <CardFooter
+            pad={{ horizontal: 'small' }}
+            background="light-2"
+          >
+            <Button
+              icon={<Favorite color="red" />}
+              hoverIndicator
+            />
+            <Button
+              icon={<ShareOption color="plain" />}
+              hoverIndicator
+            />
+          </CardFooter>
+        </Card>
+      </Box>
+    </Main>
   </Layout>
 )
 
