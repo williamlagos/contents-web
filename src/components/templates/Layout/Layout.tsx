@@ -1,6 +1,7 @@
 import { Grommet, Main } from 'grommet'
 
 import { Footer, Header } from '../../molecules'
+import { Session } from '../../organisms'
 
 const Layout = ({ children }: any) => (
   <Grommet>
@@ -12,6 +13,7 @@ const Layout = ({ children }: any) => (
       ]}
     />
     <Main background="#eee">{children}</Main>
+    <Session user={true} perm={true} />
     <Footer />
   </Grommet>
 )

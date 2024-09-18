@@ -12,7 +12,7 @@ interface NavbarProps {
 
 const Header = ({ pages }: NavbarProps) => {
   return (
-    <GrommetHeader>
+    <GrommetHeader pad="small">
       <Button href="/" icon={<Home />} hoverIndicator />
       <Menu label="Links" items={pages} />
     </GrommetHeader>

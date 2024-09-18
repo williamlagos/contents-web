@@ -1,4 +1,5 @@
-import { Box, Form, FormField, TextInput, Button } from 'grommet'
+import { Box, TextInput, Button, Nav, Anchor, Avatar } from 'grommet'
+import { Basket, Clear, Configure, Logout, Like, User } from 'grommet-icons'
 
 interface SessionProps {
   user: any
@@ -6,101 +7,32 @@ interface SessionProps {
 }
 
 const Session = ({ user, perm }: SessionProps) => (
-  <>
-    {user ? (
-      <Box pad="medium">
-        <Form onSubmit={() => {}}>
-          <FormField label="Name" name="username">
-            <TextInput id="username-id" name="username" />
-          </FormField>
-          <FormField label="Password" name="password">
-            <TextInput id="password-id" name="password" type="password" />
-          </FormField>
-          <Button type="submit" label="Participate" />
-        </Form>
-      </Box>
-    ) : (
-      <div id="Grade" className="transitions">
-        <div className="col-xs-12 col-sm-6 col-md-3 col-lg-2 brick stamp">
-          <ul className="block nav nav-pills nav-stacked">
-            <div className="profilehead">
-              <div className="centered">
-                <span className="glyphicon glyphicon-user giant-glyphicon"></span>
-              </div>
-              <h2>
-                <dl>
-                  <dt>{user}</dt>
-                </dl>
-              </h2>
-              <div className="id hidden">{user}</div>
-            </div>
-            {perm ? (
-              <>
-                <li style={{ width: '60%', marginLeft: '20%' }}>
-                  <div
-                    style={{ marginBottom: '20px' }}
-                    className="paypal hidden"
-                  ></div>
-                  <div className="pagseguro hidden"></div>
-                </li>
-                <li>
-                  <a href="efforia/basket" className="cart">
-                    <h2 className="menu">
-                      <span className="glyphicon glyphicon-shopping-cart"></span>
-                      &nbsp; Purchases
-                    </h2>
-                  </a>
-                </li>
-                <li>
-                  <a href="efforia/basketclean" className="cartclean">
-                    <h2 className="menu">
-                      <span className="glyphicon glyphicon-trash"></span>&nbsp;
-                      Clear purchases
-                    </h2>
-                  </a>
-                </li>
-                <li>
-                  <a href="efforia/following" className="following">
-                    <h2 className="menu">
-                      <span className="glyphicon glyphicon-thumbs-up"></span>
-                      &nbsp; Following
-                    </h2>
-                  </a>
-                </li>
-                <li>
-                  <a href="efforia/config" className="page">
-                    <h2 className="menu">
-                      <span className="glyphicon glyphicon-cog"></span>&nbsp;
-                      Settings
-                    </h2>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="logout">
-                    <h2 className="menu">
-                      <span className="glyphicon glyphicon-log-out"></span>
-                      &nbsp; Exit
-                    </h2>
-                  </a>
-                </li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <a href="#" className="logout">
-                    <h2 className="menu">
-                      <span className="glyphicon glyphicon-log-out"></span>
-                      &nbsp; Exit
-                    </h2>
-                  </a>
-                </li>
-              </>
-            )}
-          </ul>
-        </div>
-      </div>
-    )}
-  </>
+  <Nav justify="center" direction="row" pad="medium" background="brand">
+    <Box direction="row" gap="small" justify="center" style={{ maxWidth: 960 }}>
+      {user
+        ? [
+            <TextInput name="username" placeholder="Username" />,
+            <TextInput
+              name="password"
+              placeholder="Password"
+              type="password"
+            />,
+            <Button type="submit" label="Enter" />
+          ]
+        : [
+            <Avatar background="brand">
+              <User color="text-strong" />
+            </Avatar>,
+            perm && [
+              <Anchor icon={<Basket />} label="Purchases" href="basket" />,
+              <Anchor icon={<Clear />} label="Clear Purchases" href="clear" />,
+              <Anchor icon={<Like />} label="Following" href="following" />,
+              <Anchor icon={<Configure />} label="Settings" href="config" />
+            ],
+            <Anchor icon={<Logout />} label="Exit" href="logout" />
+          ]}
+    </Box>
+  </Nav>
 )
 
 export default Session
