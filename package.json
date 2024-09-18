@@ -13,7 +13,8 @@
     "grommet": "^2.37.0",
     "grommet-icons": "^4.12.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
