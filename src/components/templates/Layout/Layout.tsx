@@ -1,12 +1,10 @@
 import { Grommet, Main } from 'grommet'
 
-import { Footer } from '../../molecules'
-import { Navbar } from '../../organisms'
+import { Footer, Header } from '../../molecules'
 
 const Layout = ({ children }: any) => (
   <Grommet>
-    <Navbar
-      session={false}
+    <Header
       pages={[
         { label: 'Facebook' },
         { label: 'Twitter' },
