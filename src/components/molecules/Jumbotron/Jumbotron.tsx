@@ -1,3 +1,4 @@
+import { Box, Heading, Paragraph } from 'grommet'
 import React from 'react'
 
 interface JumbotronProps {
@@ -6,10 +7,10 @@ interface JumbotronProps {
 }
 
 const Jumbotron: React.FC<JumbotronProps> = ({ title, content }) => (
-  <div className="jumbotron">
-    <h1>{title}</h1>
-    <p>{content}</p>
-  </div>
+  <Box align="center" pad="large">
+    <Heading level={1}>{title}</Heading>
+    <Paragraph textAlign="center">{content}</Paragraph>
+  </Box>
 )
 
 export default Jumbotron
