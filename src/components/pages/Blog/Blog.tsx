@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
-import Layout from '../components/Layout'
-import Contents from '../components/Contents'
+import { Layout } from '../../templates/'
+import { Contents } from '../../organisms/'
 
 import { Box, Heading, Paragraph } from 'grommet'
 
@@ -21,10 +21,7 @@ const BlogPage = () => {
   })
   return (
     <Layout>
-      <Box
-        align="center"
-        pad="medium"
-      >
+      <Box align="center" pad="medium">
         <Heading>Labs Blog</Heading>
         <Paragraph fill>
           Here will be content about programming and design.

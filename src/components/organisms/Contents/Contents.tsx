@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Post } from '../types'
+import { Post } from '../../../types'
 import { Box, Heading, Paragraph } from 'grommet'
 
 const ColoredBlock = styled.div`
@@ -29,7 +29,7 @@ const Contents = ({ items }: ContentsProps) => (
         <div
           style={{
             display: 'inline',
-            color: 'red'
+            color: 'red',
           }}
         >
           Plethora
@@ -85,17 +85,11 @@ const Contents = ({ items }: ContentsProps) => (
         </ColoredBlock>
       </SpacedColumn>
     </div>
-    <div
-      style={{ margin: 'auto' }}
-      className="row"
-    >
+    <div style={{ margin: 'auto' }} className="row">
       <div id="Grade">
         {items.map((post: Post) => {
           return (
-            <Box
-              key={post.id}
-              align="center"
-            >
+            <Box key={post.id} align="center">
               <Heading level={2}> {post.name} </Heading>
               <Heading level={3}>
                 {' '}
@@ -108,10 +102,7 @@ const Contents = ({ items }: ContentsProps) => (
         })}
       </div>
     </div>
-    <div
-      id="Espaco"
-      className="modal hide fade newusers"
-    ></div>
+    <div id="Espaco" className="modal hide fade newusers"></div>
   </>
 )
 

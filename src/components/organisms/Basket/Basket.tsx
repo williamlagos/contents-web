@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 interface ListProps {
   user: any
   perm: any
@@ -6,18 +5,12 @@ interface ListProps {
 
 const List = ({ user, perm }: ListProps) => (
   <>
-    <div
-      id="Grade"
-      className="transitions"
-    >
+    <div id="Grade" className="transitions">
       <div className="col-xs-12 col-sm-6 col-md-3 col-lg-2 brick stamp">
         <ul className="block nav nav-pills nav-stacked">
           <div className="profilehead">
             {user ? (
-              <img
-                src="{{user.profile.visual}}"
-                width="100%"
-              />
+              <img src="{{user.profile.visual}}" width="100%" />
             ) : (
               <div className="centered">
                 <span className="glyphicon glyphicon-user giant-glyphicon"></span>
@@ -40,10 +33,7 @@ const List = ({ user, perm }: ListProps) => (
                 <div className="pagseguro hidden"></div>
               </li>
               <li>
-                <a
-                  href="efforia/basket"
-                  className="cart"
-                >
+                <a href="efforia/basket" className="cart">
                   <h2 className="menu">
                     <span className="glyphicon glyphicon-shopping-cart"></span>
                     &nbsp; Compras
@@ -51,10 +41,7 @@ const List = ({ user, perm }: ListProps) => (
                 </a>
               </li>
               <li>
-                <a
-                  href="efforia/basketclean"
-                  className="cartclean"
-                >
+                <a href="efforia/basketclean" className="cartclean">
                   <h2 className="menu">
                     <span className="glyphicon glyphicon-trash"></span>&nbsp;
                     Limpar compras
@@ -62,10 +49,7 @@ const List = ({ user, perm }: ListProps) => (
                 </a>
               </li>
               <li>
-                <a
-                  href="efforia/following"
-                  className="following"
-                >
+                <a href="efforia/following" className="following">
                   <h2 className="menu">
                     <span className="glyphicon glyphicon-thumbs-up"></span>
                     &nbsp; Seguindo
@@ -73,10 +57,7 @@ const List = ({ user, perm }: ListProps) => (
                 </a>
               </li>
               <li>
-                <a
-                  href="efforia/config"
-                  className="page"
-                >
+                <a href="efforia/config" className="page">
                   <h2 className="menu">
                     <span className="glyphicon glyphicon-cog"></span>&nbsp;
                     Ajustes
@@ -84,10 +65,7 @@ const List = ({ user, perm }: ListProps) => (
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="logout"
-                >
+                <a href="#" className="logout">
                   <h2 className="menu">
                     <span className="glyphicon glyphicon-log-out"></span>&nbsp;
                     Sair
@@ -98,10 +76,7 @@ const List = ({ user, perm }: ListProps) => (
           ) : (
             <>
               <li>
-                <a
-                  href="#"
-                  className="logout"
-                >
+                <a href="#" className="logout">
                   <h2 className="menu">
                     <span className="glyphicon glyphicon-log-out"></span>&nbsp;
                     Sair
@@ -113,10 +88,7 @@ const List = ({ user, perm }: ListProps) => (
         </ul>
       </div>
     </div>
-    <div
-      id="Espaco"
-      className="modal hide fade"
-    ></div>
+    <div id="Espaco" className="modal hide fade"></div>
   </>
 )
 

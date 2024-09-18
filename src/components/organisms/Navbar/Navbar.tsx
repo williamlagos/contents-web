@@ -7,7 +7,7 @@ import {
   Header,
   Layer,
   Menu,
-  TextInput
+  TextInput,
 } from 'grommet'
 import { Home } from 'grommet-icons'
 import { useState } from 'react'
@@ -21,15 +21,8 @@ const Navbar = ({ session, pages }: NavbarProps) => {
   const [show, setShow] = useState(false)
   return (
     <Header>
-      <Button
-        href="/"
-        icon={<Home />}
-        hoverIndicator
-      />
-      <Menu
-        label="Links"
-        items={pages}
-      />
+      <Button href="/" icon={<Home />} hoverIndicator />
+      <Menu label="Links" items={pages} />
       <Button
         label={session ? 'Logout' : 'Login'}
         onClick={() => setShow(true)}
@@ -41,29 +34,13 @@ const Navbar = ({ session, pages }: NavbarProps) => {
         >
           <Box pad="medium">
             <Form onSubmit={() => {}}>
-              <FormField
-                label="Name"
-                name="username"
-              >
-                <TextInput
-                  id="username-id"
-                  name="username"
-                />
+              <FormField label="Name" name="username">
+                <TextInput id="username-id" name="username" />
               </FormField>
-              <FormField
-                label="Password"
-                name="password"
-              >
-                <TextInput
-                  id="password-id"
-                  name="password"
-                  type="password"
-                />
+              <FormField label="Password" name="password">
+                <TextInput id="password-id" name="password" type="password" />
               </FormField>
-              <Button
-                type="submit"
-                label="Participate"
-              />
+              <Button type="submit" label="Participate" />
             </Form>
           </Box>
         </Layer>
