@@ -11,25 +11,46 @@ const Session = ({ user, perm }: SessionProps) => (
     <Box direction="row" gap="small" justify="center" style={{ maxWidth: 960 }}>
       {user
         ? [
-            <TextInput name="username" placeholder="Username" />,
+            <TextInput key="username" name="username" placeholder="Username" />,
             <TextInput
+              key="password"
               name="password"
               placeholder="Password"
               type="password"
             />,
-            <Button type="submit" label="Enter" />
+            <Button key="submit" type="submit" label="Enter" />
           ]
         : [
-            <Avatar background="brand">
+            <Avatar key="avatar" background="brand">
               <User color="text-strong" />
             </Avatar>,
             perm && [
-              <Anchor icon={<Basket />} label="Purchases" href="basket" />,
-              <Anchor icon={<Clear />} label="Clear Purchases" href="clear" />,
-              <Anchor icon={<Like />} label="Following" href="following" />,
-              <Anchor icon={<Configure />} label="Settings" href="config" />
+              <Anchor
+                key="basket"
+                icon={<Basket />}
+                label="Purchases"
+                href="basket"
+              />,
+              <Anchor
+                key="clear"
+                icon={<Clear />}
+                label="Clear Purchases"
+                href="clear"
+              />,
+              <Anchor
+                key="following"
+                icon={<Like />}
+                label="Following"
+                href="following"
+              />,
+              <Anchor
+                key="config"
+                icon={<Configure />}
+                label="Settings"
+                href="config"
+              />
             ],
-            <Anchor icon={<Logout />} label="Exit" href="logout" />
+            <Anchor key="logout" icon={<Logout />} label="Exit" href="logout" />
           ]}
     </Box>
   </Nav>

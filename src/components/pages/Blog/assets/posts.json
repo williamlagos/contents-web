@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Introduction to TypeScript",
+    "date": "2023-10-01T10:00:00Z",
+    "username": "john_doe",
+    "content": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript."
+  },
+  {
+    "id": "2",
+    "name": "Advanced TypeScript Tips",
+    "date": "2023-10-05T14:30:00Z",
+    "username": "jane_smith",
+    "content": "In this post, we will explore some advanced TypeScript tips and tricks."
+  },
+  {
+    "id": "3",
+    "name": "TypeScript with React",
+    "date": "2023-10-10T09:15:00Z",
+    "username": "alex_jones",
+    "content": "Learn how to use TypeScript with React to build robust and type-safe applications."
+  }
+]

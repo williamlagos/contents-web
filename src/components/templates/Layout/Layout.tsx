@@ -12,7 +12,9 @@ const Layout = ({ children }: any) => (
         { label: 'YouTube' }
       ]}
     />
-    <Main background="#eee">{children}</Main>
+    <Main background="#eee" align="center">
+      {children}
+    </Main>
     <Session user={true} perm={true} />
     <Footer />
   </Grommet>
