@@ -17,11 +17,11 @@ describe('Header', () => {
     )
 
     // Check for the home button
-    const homeButton = screen.getByRole('button', { name: /home/i })
+    const homeButton = screen.getByRole('link', { name: /Home/i })
     expect(homeButton).toBeInTheDocument()
 
     // Check for the menu
-    const menu = screen.getByRole('button', { name: /links/i })
+    const menu = screen.getByRole('button', { name: /Open Menu/i })
     expect(menu).toBeInTheDocument()
   })
 })

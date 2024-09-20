@@ -9,7 +9,7 @@ interface SessionProps {
 const Session = ({ user, perm }: SessionProps) => (
   <Nav justify="center" direction="row" pad="medium" background="brand">
     <Box direction="row" gap="small" justify="center" style={{ maxWidth: 960 }}>
-      {user
+      {!user
         ? [
             <TextInput key="username" name="username" placeholder="Username" />,
             <TextInput
