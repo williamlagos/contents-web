@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import { BlogPage, MainPage, NotFoundPage } from './components/pages'
+import { BlogPage, MainPage, NotFoundPage, PostDetailPage } from './components/pages'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -14,6 +14,16 @@ const router = createBrowserRouter([
   {
     path: '/blog',
     element: <BlogPage />,
+    errorElement: <NotFoundPage />
+  },
+  {
+    path: '/posts/:slug',
+    element: <PostDetailPage />,
+    errorElement: <NotFoundPage />
+  },
+  {
+    path: '/blog/:slug',
+    element: <PostDetailPage />,
     errorElement: <NotFoundPage />
   }
 ])
